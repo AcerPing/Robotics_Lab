@@ -1,0 +1,41 @@
+﻿# Python virtual environments
+.venv/
+venv/
+env/
+
+# Python cache and build artifacts
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+build/
+dist/
+*.egg-info/
+
+# Editors
+.vscode/
+.idea/
+
+# Credentials and local settings
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Local recordings and generated outputs
+RecordFile錄影/
+outputs/
+*.mkv
+*.mp4
+*.avi
+
+# Temporary files
+*.tmp
+*.bak
+~$*
+Thumbs.db
+
+# Local generated reports
+*.docx
+*.pdf

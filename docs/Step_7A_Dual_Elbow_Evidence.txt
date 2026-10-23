@@ -1,0 +1,99 @@
+# Robotics Lab｜Step 7-A Dual Elbow Evidence Record
+
+## 1. Basic Information
+- Project: Robotics Lab
+- Experiment: Dual Elbow Smoothstep Motion Coordination
+- Verification Date: 2026-10-18
+- Status: PASS
+- Scope: Computer-based humanoid joint control simulation
+
+## 2. Source File
+- File Name: humanoid_dual_elbow_gui.py
+- File Path: src\humanoid_dual_elbow_gui.py
+- File Size: 4423 Bytes
+- Last Modified: 2026-10-18 18:28:25
+- Hash Algorithm: SHA-256
+- SHA-256: DD25BBDF25B2B72C64FEAC3063B63D74D555B9BDBF4B7C87CA15887CAC208FFF
+
+## 3. Execution Environment
+- Operating System: Windows
+- Python Version: 3.10.11
+- Python Environment: .venv
+- Simulation Engine: PyBullet
+- Simulation Mode: GUI
+- Model: humanoid/humanoid.urdf
+- Fixed Base: True
+- GPU Renderer: NVIDIA GeForce RTX 3090
+
+## 4. Motion Control Configuration
+- Right Elbow: right_elbow (Joint ID 4)
+- Left Elbow: left_elbow (Joint ID 7)
+- Joint Type: REVOLUTE
+- Joint Limits: 0.00 to 179.91 degrees
+- Control Mode: POSITION_CONTROL
+- Interpolation: Smoothstep
+- Action Frames: 0 to 45 to 0 degrees
+- Simulation Frequency: 240 Hz
+- Movement Duration: 2.0 seconds per segment
+- Hold Duration: 0.5 seconds per segment
+- Force: PyBullet API default (not explicitly specified)
+- Coordination Method: Both joints receive position commands before each simulation step.
+
+## 5. Verified Execution Results
+
+### Frame 1 to Frame 2: 0 to 45 degrees
+- Right Angle Before Hold: 44.904105 degrees
+- Left Angle Before Hold: 44.904508 degrees
+- Right Angle After Hold: 44.999993 degrees
+- Left Angle After Hold: 44.999995 degrees
+- Difference After Hold: 0.000002 degrees
+- Maximum Motion Difference: 0.000464 degrees
+
+### Frame 2 to Frame 3: 45 to 0 degrees
+- Right Angle Before Hold: 0.095578 degrees
+- Left Angle Before Hold: 0.095167 degrees
+- Right Angle After Hold: 0.000023 degrees
+- Left Angle After Hold: 0.000008 degrees
+- Difference After Hold: 0.000015 degrees
+- Maximum Motion Difference: 0.000459 degrees
+
+## 6. Verification Status
+- Joint Identification: PASS
+- DIRECT Simulation: PASS
+- Synchronization Measurement: PASS
+- Source File Created: PASS
+- Syntax Check: PASS (167 lines)
+- GUI Demonstration: PASS
+- GUI Repeated Execution: PASS (2 runs)
+- Python Exit Code: 0
+- GUI Closed Normally: PASS
+- Source SHA-256: PASS
+- Recording SHA-256: PASS
+
+## 7. GUI Recording Evidence
+- Recording File: 錄製_2026_10_18_18_37_36_610.mkv
+- Recording Path: RecordFile錄影\錄製_2026_10_18_18_37_36_610.mkv
+- File Size: 2598887 Bytes
+- Last Modified: 2026-10-18 18:37:58
+- Hash Algorithm: SHA-256
+- SHA-256: B468DC84ECEFDE3BE19A6CF7B6FC0A584B5E6537EB46D23DD76902DD8FC1075E
+- Storage Decision: Retain in RecordFile錄影; no duplicate copy to outputs.
+
+## 8. Scope and Limitations
+This experiment verifies two simulated REVOLUTE elbow joints under the same Smoothstep target schedule.
+
+A small synchronization error indicates close agreement between the two simulated joint angles. It does not imply zero target-tracking error, perfectly mirrored physical motion, or general performance under different loads and control parameters.
+
+The humanoid base is fixed. This experiment does not validate real Alpha 1S hardware, physical servo motors, walking balance, or complete coordinated body movement.
+
+Recorded SHA-256 values identify file contents but do not independently prove a causal link between the source file and GUI recording.
+
+## 9. Final Decision
+Step 7-A-1: PASS
+Step 7-A-2: PASS
+Step 7-A-3: PASS
+Step 7-A-4: PASS
+Step 7-A-5A: PASS
+Step 7-A-5B: PASS
+
+The dual-elbow Smoothstep simulation, numerical synchronization analysis, GUI execution and evidence hashes have been verified.
